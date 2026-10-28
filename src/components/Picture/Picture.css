@@ -1,0 +1,76 @@
+.picture {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-grey);
+}
+
+.picture__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+/* Card: square and rounded */
+.picture--card {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-card);
+}
+
+/* Cover: fills whatever space its container gives it */
+.picture--cover {
+  width: 100%;
+  height: 100%;
+  min-height: var(--picture-cover-min-height);
+}
+
+/* Thumbnail */
+.picture--thumbnail {
+  flex-shrink: 0;
+  width: var(--picture-thumbnail-size);
+  height: var(--picture-thumbnail-size);
+  border-radius: var(--radius-button);
+}
+
+/*
+  Zoom works when hovering the picture itself, a link wrapped around it,
+  or any parent marked with data-zoom-trigger (like a whole card)
+*/
+.picture--zoom:hover .picture__img,
+a:hover .picture--zoom .picture__img,
+[data-zoom-trigger]:hover .picture--zoom .picture__img {
+  transform: scale(1.05);
+}
+
+.picture__overlay {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 1;
+}
+
+.picture-figure {
+  margin: 0;
+}
+
+.picture-figure__caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  font-size: var(--font-size-label);
+  line-height: 1.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .picture__img {
+    transition: none;
+  }
+  .picture--zoom:hover .picture__img,
+  a:hover .picture--zoom .picture__img,
+  [data-zoom-trigger]:hover .picture--zoom .picture__img {
+    transform: none;
+  }
+}

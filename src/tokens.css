@@ -1,0 +1,72 @@
+/*
+  Design tokens: every shared design value lives here.
+  Components only use these variables, never raw values,
+  so changing a value here changes it everywhere.
+  Values come from the TÍNT group project (Hopverkefni 2/style.css).
+*/
+:root {
+  /* Colours */
+  --color-green: #214E3A;
+  --color-green-dark: #183A2B;
+  --color-blue: #BFD9E8;
+  --color-blue-light: #E3EEF5;
+  --color-blue-border: #8FB3C9;
+  --color-cream: #F8F5ED;
+  --color-black: #252525;
+  --color-white: #FFFFFF;
+  --color-grey: #D9D9D9;
+  --color-red: #E0393E;
+  --color-text-muted: #6B6B6B;
+
+  /* Typography */
+  --font-heading: "Freeman", sans-serif;
+  --font-body: "Amarna", system-ui, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --letter-spacing-button: 0.04em;
+
+  --font-size-h1: 3.375rem;      /* 54px heading-1 */
+  --font-size-page-title: 2.25rem; /* 36px */
+  --font-size-section: 1.75rem;  /* 28px section-heading */
+  --font-size-name: 1.25rem;     /* 20px business-name */
+  --font-size-intro: 1.125rem;   /* 18px */
+  --font-size-body: 1rem;        /* 16px */
+  --font-size-label: 0.875rem;   /* 14px */
+  --font-size-small: 0.75rem;    /* 12px */
+
+  /* Spacing */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --section-gap: 4rem; /* 64px */
+
+  /* Shape */
+  --radius-button: 0.5rem; /* 8px */
+  --radius-card: 0.75rem;  /* 12px */
+  --radius-pill: 999px;
+  --shadow-float: 0 2px 6px rgba(0, 0, 0, 0.12);
+
+  /* Icons */
+  --icon-size-small: 1rem;    /* 16px */
+  --icon-size-medium: 1.25rem; /* 20px */
+  --icon-size-large: 1.5rem;  /* 24px */
+
+  /* Pictures */
+  --picture-cover-min-height: 20rem; /* 320px featured image */
+  --picture-thumbnail-size: 2.5rem;  /* 40px */
+
+  /* Focus */
+  --focus-ring: 2px solid var(--color-black);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: 1.5;
+  color: var(--color-black);
+  background: var(--color-white);
+}
